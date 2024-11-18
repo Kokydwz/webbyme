@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الصفحة الرئيسية</title>
+    <link rel="stylesheet" href="stylehh.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600&display=swap">
+</head>
+<body>
+    <header>
+        <!-- الشعار الذي سيعرض اسم المستخدم -->
+        <a href="#" class="logo" id="user-name">اسلام</a> <!-- سيتم تعديل الاسم هنا -->
+        <nav class="navigation">
+            <a href="#services">المحاضرات</a>
+            <a href="#projects">الامتحانات</a>
+            <a href="#contact">الملازم</a>
+        </nav>
+    </header>
+</section>
+<section class="main">
+    <div>
+        <h2>هذا الموقع تحت التجربة المحاضرات غير مرفوعة كاملة للتواصل kokydwz</h2>
+</section>
+    <section class="slider-section">
+        <div class="slider-container">
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <div class="slider">
+                <div class="slide">
+                    <img src="images/hisham.jpg" alt="دورة الكيمياء 1">
+                </div>
+                <div class="slide">
+                    <img src="images/الاستفهام.jpg" alt="دورة الكيمياء 2">
+                </div>
+                <div class="slide">
+                    <img src="images/النفي.jpg" alt="دورة الكيمياء 3">
+                </div>
+            </div>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </section>
+
+    <script>
+        let slideIndex = 0;
+
+        function moveSlide(step) {
+            const slides = document.querySelectorAll(".slide");
+            const totalSlides = slides.length;
+
+            slideIndex += step;
+
+            if (slideIndex >= totalSlides) {
+                slideIndex = 0;
+            } else if (slideIndex < 0) {
+                slideIndex = totalSlides - 1;
+            }
+
+            // تحريك الـ slider عند النقر
+            const slider = document.querySelector(".slider");
+            slider.style.transform = `translateX(-${slideIndex * 100}%)`;
+        }
+    </script>
+    
+
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2024 المصمم كوكي</p>
+    </footer>
+
+    <script>
+        // استرجاع اسم المستخدم من localStorage
+        const username = localStorage.getItem("username");
+        if (username) {
+            // تعديل النص في الشعار وفي النص الرئيسي
+            document.getElementById("user-name").textContent = username;
+            document.getElementById("user-name-display").textContent = username;
+        }
+    </script>
+
+<section class="main-content">
+    <h1></h1>
+    <div class="courses">
+        <!-- إضافة بطاقة الدورة الأولى -->
+        <div class="course-item">
+            <img src="images/الاستفهام.jpg" alt="قواعد السادس العلمي ">
+            <h3><a href="video.html"> اسلوب الاستفهام</a></h3>
+            <p>محاضرات اسلوب الاستفهام المجانية</p>
+        </div>
+        <div class="course-item">
+            <img src="images/النفي.jpg" alt="قواعد السادس العلمي">
+            <h3><a href="chemey5th.html">اسلوب النفي  </a></h3>
+            <p>محاضرات السوب النفي </p>
+        </div>
+        
+</body>
+</html>

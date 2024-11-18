@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مشغل الفيديو</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <!-- الشعار الذي سيعرض اسم المستخدم -->
+    <a href="#" class="logo" id="user-name">KOKY</a> <!-- سيتم تعديل الاسم هنا -->
+    <nav class="navigation">
+        <a href="#services">المحاضرات</a>
+        <a href="#projects">الامتحانات</a>
+        <a href="#contact">الملازم</a>
+    </nav>
+</header>
+
+  <section id="video-section">
+    <div class="video-container">
+      <!-- تضمين فيديو YouTube -->
+      <iframe src="https://youtu.be/aLexbKu1Sq4?si=U7lDBKBimFGvruDo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       </video>
+      <img src="logo.png" alt="Logo" style="position: absolute; top: 10px; right: 10px; width: 50px; height: auto;">
+      <div class="controls">
+        <!-- زر التشغيل/الإيقاف -->
+        <button id="playPauseBtn"><i class="fas fa-play"></i></button>
+        
+        <!-- زر التقديم والتأخير -->
+        <button id="rewindBtn"><i class="fas fa-backward"></i></button>
+        <button id="forwardBtn"><i class="fas fa-forward"></i></button>
+
+        <!-- شريط التقدم -->
+        <div class="progress-container">
+          <div class="progress" id="progressBar">
+            <div class="progress-filled" id="progressFilled"></div>
+          </div>
+        </div>
+
+        <!-- تغيير السرعة -->
+        <select id="speedSelector">
+          <option value="0.5">0.5x</option>
+          <option value="1" selected>1x</option>
+          <option value="1.5">1.5x</option>
+          <option value="2">2x</option>
+        </select>
+
+        <!-- زر كتم الصوت -->
+        <button id="muteBtn"><i class="fas fa-volume-up"></i></button>
+
+        <!-- زر ملء الشاشة -->
+        <button id="fullscreenBtn"><i class="fas fa-expand"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <section id="exam-section">
+    <h2>الامتحان</h2>
+    <!-- استبدال onclick برابط مباشر -->
+    <a href="text.html">
+      <button id="examButton">ادخل كود الامتحان</button>
+    </a>
+    
+    <!-- استبدال onclick برابط مباشر للتليجرام -->
+    <a href="https://t.me/kokydwz" target="_blank">
+      <button id="telegramButton">الدخول إلى قناة التليجرام</button>
+    </a>
+      <!-- زر الرجوع -->
+  <button onclick="window.history.back()">رجوع</button>
+</section>
+  </section>
+  
+  
+
+  <script src="script.js"></script>
+</body>
+</html>

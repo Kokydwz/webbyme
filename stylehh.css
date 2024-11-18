@@ -1,0 +1,211 @@
+/* إضافة خط Cairo من Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600&display=swap');
+
+* {
+    font-family: 'Cairo', sans-serif; /* تغيير الخط إلى Cairo */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; 
+}
+
+body {
+    background-color: #f0f0f0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #252a3e;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    top: 0;
+}
+
+.logo {
+    text-decoration: none;
+    color: #f6d43f;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8em;
+}
+
+.navigation a {
+    color: #f6d43f;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 30px;
+}
+
+.navigation a:hover {
+    color: #601cfc;
+}
+.main {
+
+  margin-top: 120px; /* لتفادي تداخل السلايدر مع الـ header */
+}
+/* تخصيص الـ slider */
+.slider-section {
+    width: 80%;
+    max-width: 800px;
+    margin-top: 10px; /* لتفادي تداخل السلايدر مع الـ header */
+}
+
+.slider-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* تذييل الصفحة */
+footer {
+    background-color: #2d89e3;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+/* قائمة الدورات */
+.courses {
+    display: flex;
+    justify-content: center; /* لضبط البطاقات في المنتصف */
+    flex-wrap: wrap; /* لضمان الانتقال إلى سطر جديد في حال ضيق الشاشة */
+    gap: 20px; /* المسافة بين البطاقات */
+    margin-top: 20px;
+  }
+  
+  .course-item {
+    background-color: white;
+    padding: 20px;
+    width: 30%;
+    max-width: 300px; /* تحديد أقصى عرض للبطاقة */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    transition: 0.3s ease; /* لإضافة تأثير الحركة عند التمرير */
+  }
+  
+  .course-item:hover {
+    transform: scale(1.05); /* تكبير البطاقة عند التمرير */
+  }
+  
+  .course-item img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .course-item h3 {
+    margin-top: 15px;
+    font-size: 1.5em;
+  }
+  
+  .course-item p {
+    font-size: 1.1em;
+    color: #777;
+  }
+  
+  .course-item a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .course-item a:hover {
+    color: #2d89e3;
+  }
+  
+
+@media (max-width: 1000px) {
+    /* رأس الصفحة */
+    header {
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 1.6em;
+    }
+
+    .navigation a {
+        font-size: 0.9em;
+    }
+
+    /* تخصيص السلايدر */
+    .slider-section {
+      width: 90%;
+      margin-top: 0px;
+  }
+  .main {
+    margin-top: 90;
+    font-size: 7px;
+}
+
+    .prev, .next {
+        font-size: 1.3em;
+        padding: 8px;
+    }
+    /* قائمة الدورات */
+  .courses {
+    gap: 15px;
+  }
+
+  .course-item {
+    width: 75%; /* تقليل عرض البطاقة ليتناسب مع العرض الأصغر */
+    max-width: none; /* إزالة الحد الأقصى للعرض */
+  }
+
+  .course-item h3 {
+    font-size: 1.0em;
+  }
+
+  .course-item p {
+    font-size: 0.3em;
+  }
+}

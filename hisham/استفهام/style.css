@@ -1,0 +1,216 @@
+/* إضافة خط Cairo من Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600&display=swap');
+
+* {
+    font-family: 'Cairo', sans-serif; /* تغيير الخط إلى Cairo */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; 
+}
+
+body {
+    background-color: #f0f0f0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #252a3e;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    top: 0;
+}
+
+.logo {
+    text-decoration: none;
+    color: #f6d43f;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8em;
+}
+
+.navigation a {
+    color: #f6d43f;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 30px;
+}
+
+.navigation a:hover {
+    color: #601cfc;
+}
+
+#video-section {
+  margin: 100px 0;
+  width: 90%;
+  max-width: 800px;
+}
+
+.video-container {
+  background-color: #000;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+video {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between; /* تعديل لتكون الأزرار أفقية */
+  align-items: center;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.controls button, .controls select {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  font-size: 16px; /* تصغير حجم الخط */
+  cursor: pointer;
+  margin: 5px;
+  padding: 8px 12px; /* تصغير حجم الأزرار */
+}
+
+.controls button:hover, .controls select:hover {
+  transform: scale(1.1);
+}
+
+.progress-container {
+  flex-grow: 1;
+  margin: 0 15px;
+  position: relative;
+}
+
+.progress {
+  width: 100%;
+  height: 7px; /* تكبير الشريط */
+  background-color: #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.progress-filled {
+  height: 100%;
+  background-color: #252a3e;
+  border-radius: 5px;
+  width: 0%;
+}
+
+#exam-section {
+  margin-top: 30px;
+  text-align: center;
+}
+
+#exam-section h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+#examButton, #telegramButton {
+  background-color: #252a3e;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s;
+}
+
+#examButton:hover, #telegramButton:hover {
+  background-color: #252a3e;
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 1000px) {
+  .logo {
+    font-size: 20px;
+    padding: 8px 16px;
+    top: 10px;
+    right: 15px;
+  }
+    /* رأس الصفحة */
+    header {
+      padding: 10px;
+  }
+
+  .logo {
+      font-size: 1.6em;
+  }
+
+  .navigation a {
+      font-size: 0.9em;
+  }
+
+  #video-section {
+    width: 95%;
+  }
+  .progress-container {
+    width: 80%; /* يمكنك زيادة هذه القيمة مثل 90% أو 100% حسب احتياجك */
+    max-width: 1000px; /* تحديد الحد الأقصى للطول */
+  }
+  
+  .progress {
+    width: 100%; /* يمكن تخصيص العرض بشكل أكبر */
+    height: 5px;
+    background-color: #ddd;
+    border-radius: 5px;
+  }
+  
+  .controls {
+    flex-direction: row; /* التأكد من أن الأزرار أفقية */
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+  }
+
+  .controls button, .controls select {
+    font-size: 16px;
+    margin: 4px;
+    padding: 6px 10px; /* تصغير الأزرار لتناسب الشاشات الصغيرة */
+  }
+
+  .progress-container {
+    margin: 0 10px;
+  }
+
+  #exam-section h2 {
+    font-size: 20px;
+  }
+
+  #examButton, #telegramButton {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .progress-container {
+    margin: 0 8px;
+  }
+
+  .progress {
+    height: 5px; /* تقليل ارتفاع الشريط في الشاشات الأصغر */
+  }
+}

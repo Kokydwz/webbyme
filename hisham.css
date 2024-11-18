@@ -1,0 +1,210 @@
+/* إضافة خط Cairo من Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600&display=swap');
+
+* {
+    font-family: 'Cairo', sans-serif; /* تغيير الخط إلى Cairo */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; 
+}
+
+body {
+    background-color: #f0f0f0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #252a3e;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    top: 0;
+}
+
+.logo {
+    text-decoration: none;
+    color: #f6d43f;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8em;
+}
+
+.navigation a {
+    color: #f6d43f;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 30px;
+}
+
+.navigation a:hover {
+    color: #601cfc;
+}
+
+
+section {
+    padding: 100px 200px;
+}
+
+/* محتوى الصفحة */
+.main-content {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.main-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* قائمة الدورات */
+.courses {
+    display: flex;
+    justify-content: center; /* لضبط البطاقات في المنتصف */
+    flex-wrap: wrap; /* لضمان الانتقال إلى سطر جديد في حال ضيق الشاشة */
+    gap: 20px; /* المسافة بين البطاقات */
+    margin-top: 20px;
+}
+
+.course-item {
+    background-color: white;
+    padding: 20px;
+    width: 90%;
+    max-width: 300px; /* تحديد أقصى عرض للبطاقة */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    transition: 0.3s ease; /* لإضافة تأثير الحركة عند التمرير */
+}
+
+.course-item:hover {
+    transform: scale(1.05); /* تكبير البطاقة عند التمرير */
+}
+
+.course-item img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.course-item h3 {
+    margin-top: 15px;
+    font-size: 1.5em;
+}
+
+.course-item p {
+    font-size: 1.1em;
+    color: #777;
+}
+
+.course-item a {
+    text-decoration: none;
+    color: #333;
+}
+
+.course-item a:hover {
+    color: #2d89e3;
+}
+
+/* تذييل الصفحة */
+footer {
+    background-color: #2d89e3;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+  @media (max-width: 1000px) {
+    /* رأس الصفحة */
+    header {
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 1.6em;
+    }
+
+    .navigation a {
+        font-size: 0.9em;
+    }
+
+    /* تخصيص السلايدر */
+    .slider-section {
+        width: 90%;
+        margin-top: 100px;
+    }
+
+    .prev, .next {
+        font-size: 1.3em;
+        padding: 8px;
+    }
+    /* قائمة الدورات */
+  .courses {
+    gap: 15px;
+  }
+
+  .course-item {
+    width: 95%; /* تقليل عرض البطاقة ليتناسب مع العرض الأصغر */
+    max-width: none; /* إزالة الحد الأقصى للعرض */
+  }
+
+  .course-item h3 {
+    font-size: 1.0em;
+  }
+
+  .course-item p {
+    font-size: 0.3em;
+  }
+}
+
+body {
+    background-color: #f0f0f0;
+    margin: 0;
+    font-family: 'Cairo', sans-serif;
+  }
+  
+  .lectures-section {
+    padding: 20px;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    max-width: 400px;  /* جعل المستطيل أصغر */
+    border-radius: 8px;
+  }
+  
+  .section-title {
+    font-size: 2em;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  .box {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;  /* تقليص padding */
+    font-size: 1.2em;  /* تصغير حجم الخط */
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    margin: 10px auto;
+    width: 100%;  /* جعله يمتد بالكامل داخل العنصر الأم */
+    height: 80px;  /* تقليص الارتفاع */
+  }
+  
+  .lectures-section {
+    background-color: #000016;
+  }
+  
